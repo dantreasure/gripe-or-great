@@ -1,1 +1,19 @@
-script.js
+$(document).ready(function(){
+	function hideAll(){
+		$('#gripe').hide('slow');
+		$('#great').hide('slow');
+		$('#stats').hide('slow');
+	}
+	$('#gripe-btn').click(function(){
+		hideAll();
+		$('#gripe').show('slow');
+	});	
+	$('#great-btn').click(function(){
+		hideAll();
+		$('#great').show('slow');
+	});	
+	$('#stats-btn').click(function(){
+		hideAll();
+		$('#stats').show('slow');
+	});	
+});

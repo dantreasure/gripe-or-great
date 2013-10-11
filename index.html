@@ -1,16 +1,36 @@
-<<html>
+<html>
 <head>
 	<title></title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="script.js"></script> 
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<script src="htt://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- This will auto-refresh page every second, be sure and turn off when you make this site public. -->
-	<meta http-equiv="refresh" content="1" >
+<!-- 	<meta http-equiv="refresh" content="1" > -->
+
+
 </head>
 <body>
-
+	<div class="container">
+		<div class="jumbotron">
+		  <div class="container" id="left-half-jumobotron">
+		    <h1>Gripe or Great</h1>
+		    <small>Because your office's stall door wasn't big enough</small>
+		    <p>
+		    	<a class="btn btn-danger btn-lg" id="gripe-btn">Gripe</a>
+		    	<a class="btn btn-success btn-lg" id="great-btn">Great</a>
+		    	<a class="btn btn-primary btn-lg" id="stats-btn">Stats</a>
+		    </p>
+		  </div>
+		</div>
+		<div class="container option" id="gripe"></div>
+		<div class="container option" id="great"></div>
+		<div class="container option" id="stats"></div>
+	</div>
 </body>
 </html>
+
