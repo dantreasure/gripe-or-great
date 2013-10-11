@@ -21,3 +21,15 @@
 		background-color: #3276b1;
 		border-color: #285e8e;
 	}
+		.option-half{
+			width: 48%;
+			float: left;
+		}
+			.info-box{
+				color: white;
+			}
+			.form-control {
+				margin-top: 20px;
+				float: right;
+			}
+		

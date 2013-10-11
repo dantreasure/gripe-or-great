@@ -8,11 +8,7 @@
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- This will auto-refresh page every second, be sure and turn off when you make this site public. -->
-<!-- 	<meta http-equiv="refresh" content="1" > -->
-
-
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 </head>
 <body>
 	<div class="container">
@@ -27,8 +23,32 @@
 		    </p>
 		  </div>
 		</div>
-		<div class="container option" id="gripe"></div>
-		<div class="container option" id="great"></div>
+		<div class="container option" id="gripe">
+			<div class="container option-half">
+				<div class="info-box">
+					<h2>Type your gripes about your company in the box and hit submit.</h2>
+					<h3>Example: "Excessive use of the phrase 'paradigm-shift' and other irrelevant buzz words. Inadequate supply of Odwalla juice."</h3>
+					<br>
+					<button type="button" class="btn btn-default btn-lg btn-block disabled" id="gripe-submit">Submit</button>
+				</div>
+			</div>
+			<div class="container option-half">
+				<textarea class="form-control" rows="17" placeholder="Let 'er rip ..." id="gripe-textarea"></textarea>
+			</div>
+		</div>
+		<div class="container option" id="great">
+			<div class="container option-half">
+				<div class="info-box">
+					<h2>Type what's great about where you work and hit submit.</h2>
+					<h3>Example: "More open space than the Serengeti. Unlimited paid time off."</h3>
+					<br>
+					<button type="button" class="btn btn-default btn-lg btn-block disabled" id="great-submit">Submit</button>
+				</div>
+			</div>
+			<div class="container option-half">
+				<textarea class="form-control" rows="17" placeholder="Let' 'er rip' ..." id="great-textarea"></textarea>
+			</div>
+		</div>
 		<div class="container option" id="stats"></div>
 	</div>
 </body>
