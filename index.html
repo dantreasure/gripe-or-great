@@ -1,14 +1,14 @@
 <html>
 <head>
 	<title></title>
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="script.js"></script> 
+	<link rel="stylesheet" type="text/css" href="styles.css"> 
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	
 </head>
 <body>
 	<div class="container">
@@ -52,16 +52,16 @@
 		<div class="container option" id="stats">
 			<div class="container gripe stats" id="gripe-stats">
 				<h1 id="numberOfGripes"></h1>
-				<h3 id="latestGripe"></h3>	
+				<div id="listOfGripes"></div>	
 			</div>
 			<div id="stats-divider"></div>
 			<div class="container great stats" id="great-stats">
 				<h1 id="numberOfGreats"></h1>
-				<h3 id="latestGreat"></h3>
+				<div id="listOfGreats"></div>	
 			</div>
 		</div>
 	</div>
-
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
 

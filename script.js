@@ -61,18 +61,20 @@ $(document).ready(function(){
 			$('#stats').show('slow');
 		}
 	});
+});
 
 	/*
 	 * Firebase Logic
 	 */
 
 	var gripeRef = new Firebase('https://gripe-or-great.firebaseio.com/gripe');
-	var greatRef = new Firebase('https://gripe-or-great.firebaseio.com/gripe');
+	var greatRef = new Firebase('https://gripe-or-great.firebaseio.com/great');
 	
 
 	$('#gripe-submit').click(function(){
 		var gripeText = $('#gripe-textarea').val();
-		gripeRef.push({"title": "gripe", "text": gripeText});
+		var submissionType = 'gripe';
+		gripeRef.push({submissionType: submissionType, gripeText: gripeText});
 		$('#gripe-textarea').val('');
 	});
 	$('#great-submit').click(function(){
@@ -80,22 +82,29 @@ $(document).ready(function(){
 		greatRef.push({"title": "great", "text": greatText});
 		$('#great-textarea').val('');
 	});
-	
-	
+
+
 	gripeRef.on('value', function(snapshot){
 		var gripeCount = 0;
-		var greatCount = 0;
 		snapshot.forEach(function() {
        		gripeCount++;
   		});
   		$('#numberOfGripes').html('Number of Gripes: ' + gripeCount);
-  		$('#latestGripe').html(snapshot.val().text);
-  		console.log(JSON.stringify(snapshot.val()));
-	})
+	});
 
+	gripeRef.on('child_added', function(snapshot){
+		$('#listOfGripes').append('<h3>' + snapshot.val().gripeText + '</h3>')
+	});
 
+	greatRef.on('value', function(snapshot){
+		var greatCount = 0;
+		snapshot.forEach(function() {
+       		greatCount++;
+  		});
+  		$('#numberOfGreats').html('Number of Greats: ' + greatCount);
 
+	});
 
-
-
-});
+	greatRef.on('child_added', function(snapshot){
+		$('#listOfGreats').append('<h3>' + snapshot.val().text + '</h3>')
+	});
