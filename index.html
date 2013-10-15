@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="container option-half">
-				<textarea class="form-control" rows="17" placeholder="Let 'er rip ..." id="gripe-textarea"></textarea>
+				<textarea class="form-control" rows="17" placeholder="Let 'er rip ..." id="gripe-textarea" onkeyup="trackGripeChar(this)"></textarea>
 			</div>
 		</div>
 		<div class="container option" id="great">
@@ -46,11 +46,22 @@
 				</div>
 			</div>
 			<div class="container option-half">
-				<textarea class="form-control" rows="17" placeholder="Let' 'er rip' ..." id="great-textarea"></textarea>
+				<textarea class="form-control" rows="17" placeholder="Let' 'er rip' ..." id="great-textarea" onkeyup="trackGreatChar(this)"></textarea>
 			</div>
 		</div>
-		<div class="container option" id="stats"></div>
+		<div class="container option" id="stats">
+			<div class="container gripe stats" id="gripe-stats">
+				<h1 id="numberOfGripes"></h1>
+				<h3 id="latestGripe"></h3>	
+			</div>
+			<div id="stats-divider"></div>
+			<div class="container great stats" id="great-stats">
+				<h1 id="numberOfGreats"></h1>
+				<h3 id="latestGreat"></h3>
+			</div>
+		</div>
 	</div>
+
 </body>
 </html>
 

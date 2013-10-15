@@ -25,11 +25,33 @@
 			width: 48%;
 			float: left;
 		}
-			.info-box{
-				color: white;
-			}
-			.form-control {
-				margin-top: 20px;
-				float: right;
-			}
-		
+		.info-box{
+			color: white;
+		}
+		.form-control {
+			margin-top: 20px;
+			float: right;
+		}
+
+		.stats {
+			color: white;
+			padding: 10px 10px;
+			margin: 5px 5px;
+			width: 550px;
+			height: 380px;
+			border-radius: 6px;
+			float: left;
+		}
+		#stats-divider {
+			margin: 10px 0px;
+			float: left;
+			height: 380px;
+			width: 1px;
+			border: solid;
+			border-color: white;
+		}
+		#gripe-stats{
+			overflow: auto;
+		}
+
+
