@@ -52,15 +52,6 @@ $(document).ready(function(){
 			$('#great').show('slow');
 		}
 	});	
-	$('#stats-btn').click(function(){
-		if ($('#stats').is(":visible")){
-			return;
-		}
-		else{
-			hideAll();
-			$('#stats').show('slow');
-		}
-	});
 });
 
 	/*

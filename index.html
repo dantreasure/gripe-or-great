@@ -19,7 +19,6 @@
 		    <p>
 		    	<a class="btn btn-danger btn-lg" id="gripe-btn">Gripe</a>
 		    	<a class="btn btn-success btn-lg" id="great-btn">Great</a>
-		    	<a class="btn btn-primary btn-lg" id="stats-btn">Stats</a>
 		    </p>
 		  </div>
 		</div>
@@ -27,37 +26,32 @@
 			<div class="container option-half">
 				<div class="info-box">
 					<h2>Type your gripes about your company in the box and hit submit.</h2>
-					<h3>Example: "Excessive use of the phrase 'paradigm-shift' and other irrelevant buzz words. Inadequate supply of Odwalla juice."</h3>
-					<br>
+					<h3>Example: "Excessive use of the phrase 'paradigm-shift' and other irrelevant buzz words."</h3>
+					<textarea class="form-control" rows="1" placeholder="Let 'er rip ..." id="gripe-textarea" onkeyup="trackGripeChar(this)"></textarea>
 					<button type="button" class="btn btn-default btn-lg btn-block disabled" id="gripe-submit">Submit</button>
 				</div>
 			</div>
 			<div class="container option-half">
-				<textarea class="form-control" rows="17" placeholder="Let 'er rip ..." id="gripe-textarea" onkeyup="trackGripeChar(this)"></textarea>
+				<div class="container gripe stats" id="gripe-stats">
+					<h1 id="numberOfGripes"></h1>
+					<div id="listOfGripes"></div>	
+				</div>
 			</div>
 		</div>
 		<div class="container option" id="great">
 			<div class="container option-half">
 				<div class="info-box">
-					<h2>Type what's great about where you work and hit submit.</h2>
-					<h3>Example: "More open space than the Serengeti. Unlimited paid time off."</h3>
-					<br>
+					<h2>Type the things that are great about where you work and hit submit.</h2>
+					<h3>Example: "More open space than the Serengeti."</h3>
+					<textarea class="form-control" rows="1" placeholder="Let' 'er rip' ..." id="great-textarea" onkeyup="trackGreatChar(this)"></textarea>
 					<button type="button" class="btn btn-default btn-lg btn-block disabled" id="great-submit">Submit</button>
 				</div>
 			</div>
 			<div class="container option-half">
-				<textarea class="form-control" rows="17" placeholder="Let' 'er rip' ..." id="great-textarea" onkeyup="trackGreatChar(this)"></textarea>
-			</div>
-		</div>
-		<div class="container option" id="stats">
-			<div class="container gripe stats" id="gripe-stats">
-				<h1 id="numberOfGripes"></h1>
-				<div id="listOfGripes"></div>	
-			</div>
-			<div id="stats-divider"></div>
-			<div class="container great stats" id="great-stats">
-				<h1 id="numberOfGreats"></h1>
-				<div id="listOfGreats"></div>	
+				<div class="container great stats" id="great-stats">
+					<h1 id="numberOfGreats"></h1>
+					<div id="listOfGreats"></div>	
+				</div>
 			</div>
 		</div>
 	</div>
